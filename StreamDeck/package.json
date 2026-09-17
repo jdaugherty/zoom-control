@@ -1,0 +1,21 @@
+{
+  "name": "zoom-control-streamdeck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Stream Deck plugin that controls a Zoom H6studio (via the Zoom Control Mac app's local API).",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "test-api": "node tools/api-test.mjs"
+  },
+  "dependencies": {
+    "@elgato/streamdeck": "^1.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "author": "The Zoom Control Authors",
+  "license": "MIT"
+}

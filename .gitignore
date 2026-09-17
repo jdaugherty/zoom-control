@@ -1,0 +1,29 @@
+# Copyright (c) 2026 The Zoom Control Authors
+# SPDX-License-Identifier: MIT
+# --- Swift Package Manager ---
+.build/
+.swiftpm/
+Package.resolved
+
+# --- Build output ---
+dist/
+*.app/
+
+# --- Xcode (if the package is ever opened in Xcode) ---
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+*.xcuserstate
+
+# --- Stream Deck plugin (Node) ---
+StreamDeck/node_modules/
+StreamDeck/package-lock.json
+StreamDeck/*.streamDeckPlugin
+
+# --- macOS / editor cruft ---
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
