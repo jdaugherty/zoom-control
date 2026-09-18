@@ -18,7 +18,9 @@ DerivedData/
 
 # --- Stream Deck plugin (Node) ---
 StreamDeck/node_modules/
-StreamDeck/package-lock.json
+StreamDeck/com.zoomcontrol.recorder.sdPlugin/bin/
+StreamDeck/com.zoomcontrol.recorder.sdPlugin/imgs/marketplace*.png
+StreamDeck/com.zoomcontrol.recorder.sdPlugin/logs/
 StreamDeck/*.streamDeckPlugin
 
 # --- macOS / editor cruft ---

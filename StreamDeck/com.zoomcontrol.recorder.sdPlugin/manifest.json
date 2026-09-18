@@ -1,0 +1,124 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.zoomcontrol.recorder",
+  "Name": "Zoom Recorder Control",
+  "Version": "0.1.1.0",
+  "Author": "The Zoom Control Authors",
+  "Description": "Control a Zoom recorder through the Zoom Control Mac app, with live transport, status and stereo meters on Mini and Mobile.",
+  "Category": "Zoom Recorder Control",
+  "CategoryIcon": "imgs/plugin",
+  "Icon": "imgs/marketplace",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20"
+  },
+  "PropertyInspectorPath": "ui/index.html",
+  "Actions": [
+    {
+      "UUID": "com.zoomcontrol.recorder.toggle",
+      "Name": "Record / Stop",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Start or stop recording based on recorder state, including inside Multi Actions.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": true,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "UUID": "com.zoomcontrol.recorder.record",
+      "Name": "Record",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Start recording; does nothing if already recording or record-paused.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": true,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "UUID": "com.zoomcontrol.recorder.stop",
+      "Name": "Stop",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Stop recording or playback.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": true,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "UUID": "com.zoomcontrol.recorder.play",
+      "Name": "Play / Pause",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Send the recorder's Play/Pause key and display its reported state.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": false,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "UUID": "com.zoomcontrol.recorder.status",
+      "Name": "Status Tile",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Choose remaining time, power, filename, connection, or other recorder metadata.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": false,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "UUID": "com.zoomcontrol.recorder.meters",
+      "Name": "Stereo Meter",
+      "Icon": "imgs/plugin",
+      "Tooltip": "Live L/R relative level bars from the recorder (not calibrated dBFS).",
+      "Controllers": [
+        "Keypad"
+      ],
+      "SupportedInMultiActions": false,
+      "States": [
+        {
+          "Image": "imgs/plugin",
+          "TitleAlignment": "middle"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Copyright (c) 2026 The Zoom Control Authors — SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoom Recorder</title>
+  <style>
+    body { background: #2d2d2d; color: #ddd; font: 13px system-ui, sans-serif; margin: 16px; }
+    label { display: block; margin: 16px 0 6px; }
+    select { width: 100%; padding: 7px; color: #eee; background: #444; border: 1px solid #666; }
+    p { line-height: 1.5; }
+    small { color: #bbb; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <h3>Zoom Recorder Control</h3>
+  <section id="status-settings" hidden>
+    <label for="field">Display</label>
+    <select id="field">
+      <option value="connection">Connection / device</option>
+      <option value="elapsed">Record / playback position</option>
+      <option value="remaining">Remaining recording time</option>
+      <option value="power">Battery / power source</option>
+      <option value="filename">Current recording / playback filename</option>
+      <option value="sampleRate">Sample rate</option>
+      <option value="device">Device name / model</option>
+      <option value="firmware">Firmware</option>
+      <option value="card">Card status</option>
+      <option value="message">Recorder message</option>
+    </select>
+    <p>Long values are shortened to fit the key. Missing values appear as —. Add multiple Status Tiles to show different fields.</p>
+  </section>
+  <section id="transport-settings" hidden>
+    <label><input type="checkbox" id="show-time" checked> Show elapsed time below transport state</label>
+    <p>Recording state follows the recorder. A yellow alert means the command failed or the requested state was not confirmed.</p>
+  </section>
+  <section id="meter-settings" hidden>
+    <p>Live relative L/R levels update at the recorder's rate (about 8 Hz). These bars are not calibrated dBFS or verified clip indicators.</p>
+  </section>
+  <p>Keep <strong>Zoom Control.app</strong> running on this Mac and the recorder in <strong>Bluetooth → Control &amp; Sync</strong>.</p>
+  <p><small>Local API: ws://127.0.0.1:47337<br>Mini and Mobile share the same recorder session. Leave the key's custom title and image unset to see live graphics.</small></p>
+  <script src="inspector.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ make build      # build the CLI too: .build/release/zoomctl
   power source / battery, stereo level meters (~8 Hz), device name, model and firmware.
 - Set the recorder's clock from the Mac.
 - Menu bar extra with quick REC / STOP / PLAY.
-- A local WebSocket API (`ws://127.0.0.1:47337`) so scripts and, later, a Stream Deck plugin can drive
+- A local WebSocket API (`ws://127.0.0.1:47337`) so scripts and the Stream Deck plugin can drive
   the recorder through the app's live session.
 
 ## Using it
@@ -67,6 +67,14 @@ on every change (≤10/s). Send `{"cmd":"key","key":"rec"}`, `{"cmd":"toggleReco
 `{"cmd":"setClock"}`, `{"cmd":"connect"}`, `{"cmd":"disconnect"}`; each is answered with an `ack`.
 See `Sources/ZoomKit/ControlServer.swift`.
 
+### Stream Deck Mini and Mobile
+
+`StreamDeck/` contains a native Elgato plugin with Record, Stop, Record Toggle, Play/Pause, live stereo
+meters, and configurable metadata tiles (timer, remaining time, power, filename, sample rate, and more).
+Both devices share the app's existing recorder session. A simulated recorder feed lets you try the
+plugin before building the Swift app. See [StreamDeck/README.md](StreamDeck/README.md) for build,
+installation, and Mini/Mobile layouts.
+
 ## Layout
 
 | Path | What |
@@ -79,7 +87,7 @@ See `Sources/ZoomKit/ControlServer.swift`.
 | `Sources/blescan/` | Generic BLE scanner / GATT dumper |
 | `Resources/Info.plist` | App bundle plist (Bluetooth usage description) |
 | `PROTOCOL.md` | The recovered protocol, in detail |
-| `StreamDeck/` | Placeholder for the future Stream Deck plugin (see PROTOCOL.md / README notes) |
+| `StreamDeck/` | Elgato Mini/Mobile plugin, settings UI, simulator, and tests |
 
 ## Gotchas learned the hard way
 
